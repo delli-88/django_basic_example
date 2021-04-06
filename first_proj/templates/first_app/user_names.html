@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html" %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/myFile.css' %}">
+{% endblock %}
+{% block body_block %}
+
+
+<h1>Here are names of Registered users, Check if you are one of Us.</h1>
+
+{% if users %}
+<table>
+  <tr>
+    <th><u>User Names</u></th>
+  </tr>
+  {% for ent in users %}
+  <tr>
+    <td>{{ent.firstName|title}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+<a href="{% url 'index' %}">Click here to go Home</a>
+{% endblock %}

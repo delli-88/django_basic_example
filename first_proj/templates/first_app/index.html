@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html" %}
+{% block body_block %}
+      <div class="jumbotron">
+        <h1>Go to /users page to signUp</h1>
+        <a href="{% url 'first_app:users' %}">or Just click Here to register</a><br>
+        <a href="{% url 'first_app:forms' %}">go to forms</a><br>
+        <a href="{% url 'first_app:usernames' %}">Click here to display list of registered users</a>
+      </div>
+{% endblock %}
